@@ -1,0 +1,65 @@
+<html lang="en">
+   <head>
+    <title>ADB Quiz 01</title>
+    <meta charset="utf-8"/>
+      <style>
+         form {text-align: center;}
+         table, td, th {
+            border:2px solid black;
+            border-collapse: collapse;
+            width: 25%;
+            text-align: center;
+            margin-left: auto; 
+            margin-right: auto;
+            font-weight: bold;
+            font-size: medium;
+            font-variant: petite-caps;
+            color: darkred;
+          }
+         p {
+           font-size: 20px;
+           font-weight: bold;
+           color: purple;
+         }
+         h3 {
+           font-variant: petite-caps;
+           color: darkred;
+           font-size: x-large;
+         }
+        
+         input{
+           border-radius: 10px;
+           padding: 13px;
+           color: darkred;
+           font-weight: bold;
+           font-size: large;
+         }
+         </style>
+      </head>
+   <body>
+
+      <body style="background-color: beige;"> 
+   
+      <a href="/"><button>Home</button></a> <br> 
+   
+      <table> 
+         <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Class</th>
+            <th>Picture</th>
+            <th>Comments</th>
+         </tr>
+         {% for va in values %}
+         <tr>
+            <td>{{va[0]}}</td>
+            <td>{{va[1]}}</td>
+            <td>{{va[2]}}</td>
+            <td><img style="height: 100px"   src="static/{{va[3]}}" alt="No Information or Picture Available"><br>{{va[3]}}</td>
+            <td>{{va[4]}}</td> 
+         </tr>
+         {% endfor %}
+      </table>
+     
+   </body>
+</html>
